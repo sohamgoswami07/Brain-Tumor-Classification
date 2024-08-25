@@ -1,0 +1,277 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* #response {
+  white-space: pre-wrap; 
+}
+
+.contain{
+  width: 50%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contain form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contain progress{
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* --bg-color: #040D12; */
+  --bg-color: #001d28;
+  --color: #FDDC5C;
+  --text-color: #FFFFFF;
+  --hover-color: #FCCC10;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color) !important;
+  color: var(--color) !important;
+}
+
+.preloader {
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+}
+
+.preloader dotlottie-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.row {
+  height: 100vh;
+  width: auto;
+}
+
+/* header section */
+
+.header-content h1 {
+  font-size: 48px;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.header-content span {
+  color: var(--color);
+}
+
+.header-content p {
+  font-size: 24px;
+  color: var(--text-color);
+  margin: 25px 0px;
+}
+
+.header-content a {
+  text-decoration: none;
+  padding: 15px 30px;
+  width: 150px;
+  border-radius: 50px;
+  background-color: var(--color);
+  color: var(--bg-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s;
+}
+
+.header-content a:hover {
+  background-color: var(--hover-color);
+}
+
+/* dataset upload section */
+
+.wrapper {
+  max-width: 480px;
+  min-width: 360px;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.125);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+}
+
+.wrapper form {
+  height: 120px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed var(--color);
+}
+
+.dataset-upload-section {
+  padding-top: 10vh;
+}
+
+.dataset-upload-section input {
+  display: none;
+}
+
+form :where(i, p) {
+  color: var(--color);
+}
+
+form i {
+  font-size: 48px;
+}
+
+form p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .upload-row {
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .upload-row i {
+  color: var(--bg-color);
+  font-size: 30px;
+}
+
+section .details span {
+  font-size: 14px;
+}
+
+.progress-area .upload-row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+
+.progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: var(--color);
+  border-radius: inherit;
+}
+
+.uploaded-area {
+  max-height: 120px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.uploaded-area.onprogress {
+  max-height: 150px;
+}
+
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.uploaded-area .upload-row .content {
+  display: flex;
+  align-items: center;
+}
+
+.uploaded-area .upload-row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.uploaded-area .upload-row .details .size {
+  color: #404040;
+  font-size: 11px;
+}
+
+.uploaded-area i.fa-check {
+  font-size: 16px;
+}
+
+.analyse-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: var(--color);
+  color: var(--bg-color);
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.analyse-btn {
+ background-color: var(--hover-color);
+}
+
+/* result section */
+
+.result-section {
+  padding-top: 10vh;
+}
+
+.result-wrapper {
+  display: grid;
+  max-width: 540px;
+  min-width: 360px;
+  height: auto;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.125);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 38px;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+}
+progress {
+  width: 100%; /* Set the desired width */
+}
