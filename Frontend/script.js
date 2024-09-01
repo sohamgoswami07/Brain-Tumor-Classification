@@ -7,49 +7,40 @@
 //     document.body.appendChild(img);
 // }
 
-function submit() {
+function scanBtn() {
     function show_image(src, width, height, alt) {
-        var canvas = document.createElement('canvas');
-        let hr = document.createElement('hr');
-        var ctx = canvas.getContext('2d');
-        let img = document.createElement("img");
-        
-        // let resultsDiv = document.getElementById('resultsDiv'); // Assuming 'resultsDiv' is the id of your div
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        let img = document.createElement('img');
 
         img.src = "data:image/jpeg;base64," + src;
         img.width = width;
         img.height = height;
         img.alt = alt;
 
-        if (alt == "no_tumor") {
-            resultsDiv.appendChild(img);
-            resultsDiv.appendChild(hr);
-        }
-        else {
-            img.onload = function () {
-                // Set the canvas's width and height to match the image's dimensions
-                canvas.width = img.width;
-                canvas.height = img.height;
+        img.onload = function () {
+            // Set the canvas's width and height to match the image's dimensions
+            canvas.width = img.width;
+            canvas.height = img.height;
 
-                ctx.filter = 'brightness(100%) contrast(100%) sepia(100%)' ;
-                ctx.imageSmoothingQuality = "high";
-                ctx.drawImage(img, 0, 0, img.width, img.height); // Draw the image on the canvas
-                resultsDiv.appendChild(canvas);
-                resultsDiv.appendChild(hr);
-               
-            }
+            ctx.filter = 'brightness(100%) contrast(100%) sepia(100%)' ;
+            ctx.imageSmoothingQuality = "high";
+            ctx.drawImage(img, 0, 0, img.width, img.height); // Draw the image on the canvas
+            
+
+            // Convert canvas to data URL
+            let dataURL = canvas.toDataURL('image/jpeg', 0.9);
+            photoCopy.src = dataURL;
         }
     }
 
+    let files = document.getElementById('myFiles').files;
+    let photoCopy = document.getElementById('photo-copy');
 
-    var files = document.getElementById("myFiles").files;
-    var resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Clear previous results
-
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
         (function (i) {
-            var file = files[i];
-            var formData = new FormData();
+            let file = files[i];
+            let formData = new FormData();
             formData.append("file", file);
 
             fetch('http://localhost:8000/predict', {
@@ -59,50 +50,26 @@ function submit() {
                 .then(response => response.json())
                 .then(data => {
                     if (data.confidence <= 0.85) {
-                        data.class = 'Tumor found(New class)';
+                        data.class = "Tumor found (New class)";
                     }
-                    if(data.class=="no_tumor" && data.confidence<=0.93){
-                        data.class="Tumor Found(Unidentified)";
-                    }                                                           
+                    if(data.class == "no_tumor" && data.confidence <= 0.93) {
+                        data.class= "Tumor found (Unidentified)";
+                    }
 
-                    var p = document.createElement('p');
-                    var x = document.createElement('x');
-                    var y = document.createElement('y');
-                    
+                    let fileName = document.getElementById('file-name');
+                    let clasification = document.getElementById('clasification');
+                    let confidence = document.getElementById('confidence');
 
-
-                    // p.textContent = "File: " + file.name + ", Class: " + data.class + ", Confidence: " + (data.confidence * 100).toFixed(2) + "%";
-                    p.textContent = "File: " + file.name;
-                    x.textContent = "Class: " + data.class;
-                    y.textContent = "Confidence: " + (data.confidence * 100).toFixed(2) + "%";
-
-
-
-
-                    resultsDiv.appendChild(p);
-
-                    resultsDiv.appendChild(x);
-
-                    resultsDiv.appendChild(y);
-
-
-
-
-
+                    fileName.textContent = file.name;
+                    clasification.textContent = data.class;
+                    confidence.textContent = (data.confidence * 100).toFixed(2) + "%";
 
                     // Create a new progress bar for each file
-                    var progressBar = document.createElement('progress');
-                    progressBar.value = (data.confidence * 100).toFixed(2);
+                    let progressBar = document.getElementById('progress-bar');
                     progressBar.max = 100; // Set the maximum value
-                    resultsDiv.appendChild(progressBar);
+                    progressBar.value = (data.confidence * 100).toFixed(2);
 
-                    show_image(data.image, 200, 200, data.class);
-
-                    
-
-                    // Create a new button for each file
-
-
+                    show_image(data.image, 250, 250, data.class);
                 })
                 .catch((error) => {
                     console.error('Error:', error);
