@@ -554,10 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -570,14 +566,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.h-\[150px\] {
-  height: 150px;
-}
-
-.h-\[15px\] {
-  height: 15px;
 }
 
 .h-auto {
@@ -594,10 +582,6 @@ video {
 
 .max-h-full {
   max-height: 100%;
-}
-
-.w-\[150px\] {
-  width: 150px;
 }
 
 .w-auto {
@@ -648,24 +632,12 @@ video {
   overflow: hidden;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .rounded-\[16px\] {
   border-radius: 16px;
 }
 
 .rounded-\[24px\] {
   border-radius: 24px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-md {
@@ -737,11 +709,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -803,30 +770,20 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+/* Your custom styles */
+
+.my-custom-style {
+  /* ... your custom CSS rules here ... */
+}
+
 .hover\:bg-amber-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .md\:h-\[250px\] {
-    height: 250px;
-  }
-
-  .md\:w-\[250px\] {
-    width: 250px;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:gap-10 {

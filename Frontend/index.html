@@ -21,7 +21,7 @@
         <div class="rounded-[16px] backdrop-blur-md bg-gradient-to-r from-slate-800/25 via-slate-800/35 to-slate-800/25 border border-white/40 p-6">
           <p class="text-2xl font-bold text-amber-300">Upload files for scan</p>
           <input class="file-input image-input w-full text-slate-100 outline-dashed outline-2 outline-offset-2 outline-amber-300 rounded-md my-5 px-6 py-12 cursor-pointer" type="file" id="myFiles" accept="image/*" multiple>
-          <button onclick="scanBtn()" class="scan-btn bg-amber-300 hover:bg-amber-400 text-black font-bold rounded-md px-4 py-2">Scan Now</button>
+          <button onclick="scanBtn()" id="submitBtn" class="bg-amber-300 hover:bg-amber-400 text-black font-bold rounded-md px-4 py-2">Scan Now</button>
         </div>
       </div>
       <div class="h-full">
@@ -32,7 +32,7 @@
     </div>
   </div>
   
-  <div class="h-screen w-full p-10 bg-gray-950">
+  <div class="result-section h-screen w-full p-10 bg-gray-950">
       <div class="h-auto max-h-full rounded-[16px] backdrop-blur-md bg-gradient-to-r from-slate-800/25 via-slate-800/35 to-slate-800/25 border border-white/40 p-6 overflow-auto">
         <p class="text-2xl font-bold text-amber-300">Result</p>
 

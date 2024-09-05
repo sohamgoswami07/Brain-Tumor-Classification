@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: minmax(150px, 250px) 1fr;
     gap: 6rem;
-    padding: 6rem 0rem;
+    padding: 1rem 0rem;
 }
 
 #photo-copy {
@@ -30,12 +30,12 @@
 }
 
 #result-values {
-    color: rgb(252 211 77);
+    color: rgb(252, 211, 77);
     margin: 24px 0px;
 }
 
 #result-values p {
-    color: rgb(203 213 225);
+    color: rgb(203, 213, 225);
 }
 
 #progress-bar {
