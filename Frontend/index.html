@@ -7,26 +7,42 @@
   <title>Brain Tumor Clasification</title>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./style.css">
-  <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="./tailwindcss.css">
 </head>
 
 <body>
-  
-  <div class="h-screen w-full bg-gray-950">
-    <div class="h-full w-auto justify-between items-center grid grid-cols-1 grid-flow-row gap-0 p-10 md:grid-cols-2 md:gap-10">
+  <!-- <div class="relative flex items-center justify-center text-center h-screen w-full bg-gray-950 overflow-hidden">
+    <div class="wrapper"></div>
+    <video class="absolute top-0 left-0 z-0" src="./assets/background.mp4" type="video/mp4" autoplay muted loop plays-inline></video>
+    <div class="absolute items-center justify-center text-center h-fit w-full z-10">
+      <h1 class="text-slate-100 text-5xl font-normal"><span class="text-amber-300">Brain Tumor</span> Clasification</h1>
+      <p class="text-slate-300 my-6 text-xl font-light">Transforming brain tumor detection with AI-powered precision, enabling early diagnosis, faster treatment decisions, and improved patient care for a healthier future</p>
+    </div>
+  </div>
+
+  <div class="h-screen w-full bg-white">
+    <h3 class="text-black text-5xl p-6">How it works</h3>
+    <div class="h-fit w-auto justify-between items-center grid grid-cols-1 grid-flow-row gap-0 px-6 md:grid-cols-2 md:gap-10 md:px-12 bg-black">
       <div>
-        <h1 class="text-4xl text-slate-100 font-bold"><span class="text-amber-300">Brain Tumor</span> Clasification</h1>
-        <p class="text-xl text-slate-300 my-6">Revolutionizing Brain Tumor Diagnosis with AI Precision</p>
-        <div class="rounded-[16px] backdrop-blur-md bg-gradient-to-r from-slate-800/25 via-slate-800/35 to-slate-800/25 border border-white/40 p-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sequi. Repellendus suscipit maiores pariatur incidunt eum earum iste, necessitatibus, mollitia, atque nemo et provident quo laborum non fugiat libero eos!
+      </div>
+      <div>
+        <video class="" src="./assets/scan.mp4" type="video/mp4" autoplay muted loop plays-inline></video>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-screen w-full">
+    <div class="h-full w-auto justify-between items-center grid grid-cols-1 grid-flow-row gap-0 px-6 md:grid-cols-2 md:gap-10 bg-black">
+      <div class="border-t-2 border-l-2 border-black h-full">
+        <div class="h-full justify-center items-center grid overflow-hidden sketchfab-embed-wrapper container3D">
+          <iframe class="w-screen h-full" title="Plastinated Human Brain" frameborder="0" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="500" src="https://sketchfab.com/models/2df234ff65b0483fb5b5e15e40efa65d/embed?autostart=1&annotations_visible=0&preload=1&transparent=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&dnt=1"></iframe>
+        </div>
+      </div>
+      <div>
+        <div class="border border-white/40 m-6">
           <p class="text-2xl font-bold text-amber-300">Upload files for scan</p>
           <input class="file-input image-input w-full text-slate-100 outline-dashed outline-2 outline-offset-2 outline-amber-300 rounded-md my-5 px-6 py-12 cursor-pointer" type="file" id="myFiles" accept="image/*" multiple>
           <button onclick="scanBtn()" id="submitBtn" class="bg-amber-300 hover:bg-amber-400 text-black font-bold rounded-md px-4 py-2">Scan Now</button>
-        </div>
-      </div>
-      <div class="h-full">
-        <div class="rounded-[24px] backdrop-blur-md bg-gradient-to-r from-slate-800/25 via-slate-800/35 to-slate-800/25 border border-white/40 h-full justify-center items-center grid overflow-hidden sketchfab-embed-wrapper container3D">
-          <iframe class="w-screen h-full" title="Plastinated Human Brain" frameborder="0" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="500" src="https://sketchfab.com/models/2df234ff65b0483fb5b5e15e40efa65d/embed?autostart=1&annotations_visible=0&preload=1&transparent=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&dnt=1"></iframe>
         </div>
       </div>
     </div>
@@ -39,6 +55,109 @@
         <div id="results" class="h-full w-full"></div>
 
       </div>
+  </div> -->
+
+
+  <!-- Header -->
+  <div class="section">
+    <div class="wrapper">
+      <div class="background">
+        <video class="bg-video" autoplay muted loop>
+            <source src="./assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="heading">
+        <h1><span>Brain Tumor</span> Classification</h1>
+        <p>AI-powered brain tumor classification: Precise, rapid, and transformative for enhanced diagnosis and personalized treatment</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- How it works -->
+  <div class="section">
+    <h1 class="title">How it works</h1>
+    <div class="working-bg">
+      <div class="details">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.
+      </div>
+      <div class="working-vdo">
+        <video autoplay muted loop>
+          <source src="./assets/scan.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Types of brain tumors -->
+  <div class="section">
+    <div class="tumor-bg">
+      <div class="details-section">
+        <div class="tumor-img">
+          <img src="./assets/image(6).jpg" alt="">
+        </div>
+        <div class="tumor-details">
+          <h1><span>Types of brain tumor</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.</p>
+        </div>
+      </div>
+      <div class="details-section">
+        <div class="tumor-img">
+          <img src="./assets/gg (7).jpg" alt="">
+        </div>
+        <div class="tumor-details">
+          <h1><span>Glioma</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.</p>
+        </div>
+      </div>
+      <div class="details-section">
+        <div class="tumor-img">
+          <img src="./assets/m (99).jpg" alt="">
+        </div>
+        <div class="tumor-details">
+          <h1><span>Meningioma</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.</p>
+        </div>
+      </div>
+      <div class="details-section">
+        <div class="tumor-img">
+          <img src="./assets/p (16).jpg" alt="">
+        </div>
+        <div class="tumor-details">
+          <h1><span>Pituitary</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scan section -->
+  <div class="section">
+    <div class="scan-grid">
+    <div class="scan-details">
+      <h1>Scan now</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ab aut ullam suscipit. Itaque temporibus, quaerat voluptates saepe assumenda nulla totam unde eos sunt. Est voluptates autem sapiente architecto officia.</p>
+      </div>
+      <div class="scan-option">
+        <form action="#">
+          <input class="file-input" type="file" name="file" id="myFiles" accept="image/*" hidden multiple>
+          <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FFd700"><path d="M448-201.33h66.67V-391l76 76 46.66-47L480-516.67l-156 156L371-314l77-77v189.67ZM226.67-80q-27 0-46.84-19.83Q160-119.67 160-146.67v-666.66q0-27 19.83-46.84Q199.67-880 226.67-880H574l226 226v507.33q0 27-19.83 46.84Q760.33-80 733.33-80H226.67Zm314-542.67v-190.66h-314v666.66h506.66v-476H540.67Zm-314-190.66v190.66-190.66 666.66-666.66Z"/></svg>
+          <p>Drop your file here or browse</p>
+        </form>
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+        <button class="analyse-btn" onclick="scanBtn()">Scan now</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Result section -->
+  <div class="section">
+    <div class="result-section">
+      <h1 class="title">Results</h1>
+      <div class="results" class="results"></div>
+    </div>
   </div>
 
   <!-- Custom JS -->

@@ -1,60 +1,534 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Global CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font family */
+  --font-family: "Poppins", system-ui;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-style: normal;
+
+  /* Color */
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --off-white-color: #e9f0ff;
+  --text-color: #ffd700;
+  /* --text-color: #39ff14; */
+
+  /* Spacing */
+  --small-padding: 1.5rem;
+  --medium-padding: 2.5rem;
+  --padding: 5rem;
+  --small-margin: 1.5rem;
+  --medium-margin: 2.5rem;
+  --margin: 5rem;
+  --letter-spacing: 1.25rem;
+
+  /* Size */
+  --height: 100vh;
+  --width: 100vw;
+  --min-height: 20rem;
+  --max-height: 45rem;
+  --min-width: 20rem;
+  --max-width: 45rem;
+  --primary-size: 1rem;
+  --heading: 3rem;
+  --paragraph: 1.25rem;
+
+  /* Z-index */
+  --z-primary: 1;
+  --z-background: -10;
+  --z-10: 10;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-light);
+  font-style: var(--font-style);
+  scroll-behavior: smooth;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.section {
+  position: relative;
+  height: var(--height);
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: var(--z-primary);
+}
+
+span {
+  color: var(--text-color);
+}
 
 /* Custom CSS styling */
-/* Google Fonts */
+
+/* Header */
+.wrapper {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+  z-index: var(--z-background);
+}
+
+.bg-video {
+  width: var(--width);
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+}
+
+.heading h1 {
+  font-size: var(--heading);
+  font-weight: var(--font-light);
+  color: var(--secondary-color);
+}
+
+.heading p {
+  font-weight: var(--font-light);
+  color: var(--secondary-color);
+  font-size: var(--paragraph);
+  opacity: 0.5;
+}
+
+/* How it works */
+.title {
+  font-size: var(--heading);
+  font-weight: var(--font-light);
+  padding: var(--medium-padding);
+}
+
+.working-bg {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--medium-padding);
+  margin: 0rem var(--margin);
+  height: calc(100vh - 9.5rem);
+  width: auto;
+}
+
+.working-vdo {
+  min-height: var(--min-height);
+  max-height: auto;
+  width: auto;
+}
+
+.working-vdo video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Types of brain tumors */
+.tumor-bg {
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--medium-padding);
+  margin: 0rem var(--margin);
+  height: calc(100vh - 5rem);
+  width: auto;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.tumor-bg::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 5px;
+}
+
+.tumor-bg::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
+
+.details-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  height: 100%;
+  width: auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: var(--medium-padding) 0rem;
+}
+
+.tumor-details h1 {
+  font-size: var(--heading);
+  font-weight: var(--font-light);
+  padding: 2rem 0rem;
+  line-height: 4rem;
+}
+
+.tumor-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+}
+
+.tumor-img img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: auto;
+}
+
+/* Scan now */
+.scan-details h1 {
+  font-size: 5rem;
+  font-weight: var(--font-light);
+  padding: var(--medium-padding) 0rem;
+  color: var(--text-color);
+}
+
+.scan-grid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  color: var(--primary-color);
+  padding: var(--medium-padding);
+  margin: 0rem var(--margin);
+  height: 100vh;
+  width: auto;
+}
+
+.scan-option {
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  height: 100%;
+  width: 100%;
+  padding: var(--medium-padding);
+  border-left: 1px solid transparent;
+  /* Gradient border */
+  border-image: linear-gradient(
+    to bottom,
+    #f8f8ff,
+    #cac9cd,
+    #9b9a9c,
+    #6d6a6a,
+    #3e3b39,
+    #100c07,
+    #3e3b39,
+    #6d6a6a,
+    #cac9cd,
+    #f8f8ff
+  );
+  border-image-slice: 1;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.125));
+}
+
+.scan-option form {
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--off-white-color);
+  border: 2px dashed var(--text-color);
+}
+
+.scan-option form svg {
+  margin: 0.5rem;
+}
+
+.scan-option .upload-row {
+  margin-bottom: 0.75rem;
+  background: var(--off-white-color);
+  list-style: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upload-row .details p {
+  font-size: 0.8rem;
+}
+
+.progress-area .upload-row .content {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+.progress-area p {
+  font-size: 1rem;
+  padding: 0.75rem 0rem;
+}
+
+.progress-area .content .progress-bar {
+  height: 0.3rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  background: var(--secondary-color);
+  border-radius: 30px;
+}
+
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: var(--text-color);
+  border-radius: inherit;
+}
+
+.uploaded-area {
+  max-height: 7.5rem;
+  overflow-y: scroll;
+  margin-bottom: 1.25rem;
+}
+
+.uploaded-area.onprogress {
+  max-height: 9rem;
+}
+
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.uploaded-area .upload-row .content {
+  display: flex;
+  align-items: center;
+}
+
+.uploaded-area .upload-row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.uploaded-area .upload-row .details .size {
+  color: #404040;
+  font-size: 0.75rem;
+}
+
+.analyse-btn {
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  color: var(--primary-color);
+  background-color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* Result section */
+.result-section {
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid transparent;
+  /* Gradient border */
+  border-image: linear-gradient(
+    to right,
+    #f8f8ff,
+    #cac9cd,
+    #9b9a9c,
+    #6d6a6a,
+    #3e3b39,
+    #100c07,
+    #3e3b39,
+    #6d6a6a,
+    #cac9cd,
+    #f8f8ff
+  );
+  border-image-slice: 1;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.125));
+}
+
+.results {
+  content: "";
+  height: auto;
+  max-height: calc(100vh - 15rem);
+  width: auto;
+  overflow-y: scroll;
+  margin: 0rem var(--margin);
+}
+
+.results::-webkit-scrollbar {
+  background-color: var(--off-white-color);
+  width: 5px;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
 
 .file-result {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: minmax(150px, 250px) 1fr;
-    gap: 6rem;
-    padding: 1rem 0rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(150px, 250px) 1fr;
+  gap: 3rem;
+  padding: var(--small-padding);
+  border-bottom: 1px solid transparent;
+  /* Gradient border */
+  border-image: linear-gradient(
+    to right,
+    #f8f8ff,
+    #cac9cd,
+    #9b9a9c,
+    #6d6a6a,
+    #3e3b39,
+    #100c07,
+    #3e3b39,
+    #6d6a6a,
+    #cac9cd,
+    #f8f8ff
+  );
+  border-image-slice: 1;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.125));
 }
 
-#photo-copy {
-    height: 250px;
-    width: 250px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 6px;
-    overflow: hidden;
+.photo-copy {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
 }
 
-#photo-copy img {
-    width: 100%;
-    height: 100%;
+.photo-copy img {
+  width: 100%;
+  height: 100%;
 }
 
-#result-details {
-    width: 100%;
-    height: auto;
-    font-size: 20px;
-    padding: 24px 0px;
+.result-details {
+  width: 100%;
+  height: auto;
+  font-size: 1.25rem;
+  padding: var(--small-padding);
 }
 
-#result-values {
-    color: rgb(252, 211, 77);
-    margin: 24px 0px;
+.result-values {
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+  margin: var(--small-margin) 0rem;
 }
 
-#result-values p {
-    color: rgb(203, 213, 225);
+.result-values p {
+  font-weight: var(--font-light);
+  font-size: 1rem;
+  color: var(--primary-color);
 }
 
-#progress-bar {
-    width: 100%;
-    height: 15px;
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    overflow: hidden;
+.progress-bar {
+  width: 100%;
+  height: 0.65rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .file-result {
-        display: block;
-        padding: 0rem;
-    }
+@media (max-width: 768px) and (orientation: portrait) {
+  /* How it works */
+  .title {
+    font-size: var(--heading);
+    font-weight: var(--font-light);
+    padding: var(--small-padding);
+  }
+
+  .working-bg {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: var(--small-padding);
+    margin: 0rem var(--small-margin);
+    height: calc(100vh - 7.5rem);
+    width: auto;
+  }
+
+  /* Types of brain tumors */
+  .details-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: var(--small-padding) 0rem;
+    margin: 0rem 1.5rem;
+  }
+
+  /* Types of brain tumors */
+  .tumor-bg {
+    padding: var(--small-padding);
+    margin: 0rem var(--small-margin);
+    height: calc(100vh - 1.5rem);
+  }
+
+  .details-section {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: var(--small-padding) 0rem;
+  }
+
+  /* Scan now */
+  .scan-details h1 {
+    font-size: 3rem;
+    padding: var(--small-padding) 0rem;
+  }
+
+  .scan-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: var(--small-padding);
+    margin: 0rem var(--small-margin);
+  }
+
+  .scan-option {
+    border-left: 0px solid transparent;
+    padding: var(--small-padding) 0rem;
+  }
+
+  /* Result section */
+  .results {
+    max-height: calc(100vh - 10rem);
+    margin: 0rem var(--small-margin);
+  }
+
+  .file-result {
+    display: block;
+    padding: var(--small-padding) 0rem;
+  }
+
+  .result-details {
+    padding-bottom: 0rem;
+  }
 }
