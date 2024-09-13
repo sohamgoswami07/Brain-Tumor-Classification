@@ -361,8 +361,6 @@ span {
 
 /* Result section */
 .result-section {
-  height: 100%;
-  width: 100%;
   border-top: 1px solid transparent;
   /* Gradient border */
   border-image: linear-gradient(
@@ -380,6 +378,7 @@ span {
   );
   border-image-slice: 1;
   filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.125));
+  display: none;
 }
 
 .results {
