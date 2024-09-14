@@ -118,11 +118,8 @@ function scanBtn() {
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.confidence <= 0.85) {
-                        data.class = "Tumor found (New class)";
-                    }
-                    if (data.class == "no_tumor" && data.confidence <= 0.93) {
-                        data.class = "Tumor found (Unidentified)";
+                    if ((data.confidence <= 0.85) || (data.class == "no_tumor" && data.confidence <= 0.93)) {
+                        data.class = "No tumor found";
                     }
 
                     let fileName = file.name;

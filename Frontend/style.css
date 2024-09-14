@@ -71,6 +71,17 @@ span {
   color: var(--text-color);
 }
 
+@keyframes appear {
+  from {
+    opacity: 0.5;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /* Custom CSS styling */
 
 /* Header */
@@ -123,6 +134,9 @@ span {
   font-size: var(--heading);
   font-weight: var(--font-light);
   padding: var(--medium-padding);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
 }
 
 .working-bg {
@@ -137,6 +151,9 @@ span {
   height: calc(100vh - 9.5rem);
   width: auto;
   text-align: start;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
 }
 
 .working-vdo {
@@ -229,6 +246,9 @@ span {
   margin: 0rem var(--margin);
   height: 100vh;
   width: auto;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
 }
 
 .scan-option {
@@ -255,6 +275,9 @@ span {
   );
   border-image-slice: 1;
   filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.125));
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
 }
 
 .scan-option form {
