@@ -252,9 +252,6 @@ span {
 }
 
 .scan-option {
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
   height: 100%;
   width: 100%;
   padding: var(--medium-padding);
@@ -376,10 +373,12 @@ span {
   text-decoration: none;
   padding: 0.75rem 1.25rem;
   color: var(--primary-color);
-  background-color: var(--text-color);
+  background-color: var(--off-white-color);
+  font-family: var(--font-family);
   font-size: 1rem;
+  font-weight: var(--font-light);
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--text-color);
 }
 
 /* Result section */
@@ -412,15 +411,6 @@ span {
   overflow-y: scroll;
   margin: 0rem var(--margin);
 }
-
-/* .results::-webkit-scrollbar {
-  background-color: var(--off-white-color);
-  width: 5px;
-}
-
-.results::-webkit-scrollbar-thumb {
-  background-color: var(--text-color);
-} */
 
 .file-result {
   width: 100%;
@@ -525,11 +515,8 @@ span {
   }
 
   .tumor-details h1 {
-    /* font-size: var(--heading);
-    font-weight: var(--font-light); */
     padding: 1.5rem 0rem;
     line-height: 3rem;
-    /* text-align: initial; */
 
     font-size: 2.5rem;
   }
