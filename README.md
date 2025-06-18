@@ -25,7 +25,7 @@ This project aims to develop an end-to-end deep learning pipeline for brain tumo
 * **Dataset**: MRI images of brain tumors
 * **Model**: Custom CNN implemented via TensorFlow/Keras
 * **Classification**: Multi-class (e.g., glioma, meningioma, pituitary, healthy)
-* **Accuracy**: \~93% accuracy achieved ([github.com][2], [github.com][3], [linkedin.com][1])
+* **Accuracy**: \~93% accuracy achieved 
 
 ---
 
