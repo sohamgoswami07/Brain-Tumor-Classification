@@ -1,11 +1,6 @@
-# Brain-Tumor-Classification
-Here’s a structured and professional **README.md** draft for your Brain Tumor Classification project that you can use on GitHub:
-
----
-
 # 🧠 Brain Tumor Classification
 
-Builds and evaluates a Convolutional Neural Network (CNN) model to detect and classify brain tumors from MRI scans with \~93% accuracy ([linkedin.com][1]).
+Builds and evaluates a Convolutional Neural Network (CNN) model to detect and classify brain tumors from MRI scans with \~93% accuracy.
 
 ## 📌 Table of Contents
 
