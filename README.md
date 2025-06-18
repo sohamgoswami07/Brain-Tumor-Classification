@@ -146,4 +146,3 @@ This project is open-source under the **MIT License**.
 * **Soham Goswami** – [LinkedIn profile](https://www.linkedin.com/in/soham-python-developer/)
 * LinkedIn: Feel free to connect for project feedback or collaborations
 
----
