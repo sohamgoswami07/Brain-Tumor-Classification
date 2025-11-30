@@ -143,6 +143,6 @@ This project is open-source under the **MIT License**.
 
 ## Contact
 
-* **Soham Goswami** – [LinkedIn profile](https://www.linkedin.com/in/soham-python-developer/)
+* **Soham Goswami** – [LinkedIn profile](https://www.linkedin.com/in/soham-frontend-engineer/)
 * LinkedIn: Feel free to connect for project feedback or collaborations
 
